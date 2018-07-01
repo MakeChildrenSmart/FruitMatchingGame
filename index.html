@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="gameCode.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+  <style>
+  .fruits
+  {
+    width:70px;
+    padding:3%;
+  }
+  .audio
+  {
+    visibility: hidden;
+  }
+  #title
+  {
+    text-align: center;
+    text-shadow: 2px 2px grey;
+    font-size: 100px;
+    margin-top:8px;
+font-family: monospace;
+  }
+  #won
+  {
+    position: absolute;
+    top:115%;
+    left:35%;
+    font-size: 50px;
+    text-shadow: 2px 2px grey;
+    font-family: 'Galada', cursive;
+    color:#800080;
+    -webkit-text-stroke: 2px black;
+  }
+  #scoreCon
+  {
+    position: absolute;
+    top:15%;
+    left:60%;
+    font-size: 40px;
+    text-shadow: 2px 2px grey;
+    padding: 8px;
+    font-family: monospace;
+
+  }
+
+  #levelCon
+  {
+    position: absolute;
+    top:15%;
+    left:25%;
+    font-size: 40px;
+    text-shadow: 2px 2px grey;
+    padding: 8px;
+    font-family: monospace;
+
+  }
+  #fruitConId
+  {
+    position: absolute;
+    top:15%;
+    width:45%;
+    text-align: center;
+    padding: 8px;
+
+  }
+  #answersConId
+  {
+    position: absolute;
+    top:25%;
+    left:50%;
+    width:45%;
+    padding: 8px;
+    text-align: center;
+  }
+  .answers
+  {
+    font-size:50px;
+    display:block;
+    padding:3%;
+    font-family: monospace;
+
+  }
+  body
+  {
+    background-color:#99ccff;
+    max-height: 100%;
+    overflow-y: hidden;
+  }
+  .background
+  {
+    position:fixed;
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    z-index:-1;
+    opacity:.25;
+  }
+  </style>
+</head>
+
+<body onload = "initialized();">
+  <div id = "title">COUNT THE FRUIT!</div>
+  <div id = "scoreCon">Points: <span id = "scoreId">0</span></div>
+  <div  id = "won">You Won! Great Job!</div>
+  <div id = "levelCon">Level <span id = "levelId">1</span></div>
+<div id = "fruitConId" class = "animateFruit"></div>
+<div id = "answersConId" class = "animateAnswers"></div>
+<audio controls class = "audio" id = "excellent">
+  <source src="audio/excellent.wav" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "nice">
+    <source src="audio/nice.wav" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "wrong">
+    <source src="audio/wrong.wav" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "yay">
+    <source src="audio/yay.mp3" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "right">
+    <source src="audio/right.mp3" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "end">
+    <source src="audio/woohoo.wav" type="audio/ogg">
+</audio>
+<img class = "background"src="images/back.jpg"/>
+</body>
+</html>
