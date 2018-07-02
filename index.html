@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="gameCode.js"></script>
+   <link rel="stylesheet" type="text/css" href="styling.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+
+</head>
+
+<body onload = "initialized();">
+  <div id = "title">COUNT THE FRUIT!</div>
+  <div id = "scoreCon">Points: <span id = "scoreId">0</span></div>
+  <div  id = "won">You Won! Great Job!</div>
+  <div id = "levelCon">Level <span id = "levelId">1</span></div>
+<div id = "fruitConId" class = "animateFruit"></div>
+<div id = "answersConId" class = "animateAnswers"></div>
+<audio controls class = "audio" id = "excellent">
+  <source src="audio/excellent.wav" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "nice">
+    <source src="audio/nice.wav" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "wrong">
+    <source src="audio/wrong.wav" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "yay">
+    <source src="audio/yay.mp3" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "right">
+    <source src="audio/right.mp3" type="audio/ogg">
+</audio>
+<audio controls class = "audio" id = "end">
+    <source src="audio/woohoo.wav" type="audio/ogg">
+</audio>
+<img class = "background"src="images/back.jpg"/>
+<button id = "play" onclick="goTo('directions.html');">?</button>
+
+</body>
+</html>
